@@ -14,7 +14,7 @@ jobs:
           aws-region: us-east-1
       - name: upload to s3 bucket
         run: |
-          aws s3 sync ./ s3://github-actions001/ \
+          aws s3 sync ecomm-2.1/ s3://github-actions001/ \
           --exclude "*" \
           --include "index.html"
   
