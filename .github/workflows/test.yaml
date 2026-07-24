@@ -6,3 +6,8 @@ jobs:
     steps:
       - name: checkout scm
         uses: actions/checkout@v4
+      - name: aws configure
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_KEY }}
