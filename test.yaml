@@ -1,8 +1,0 @@
-name: ecommerce static website
-on: push
-jobs:
-  checkout:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout scm
-        uses: actions/checkout@v4
