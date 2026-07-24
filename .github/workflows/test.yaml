@@ -12,6 +12,10 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
           aws-region: us-east-1
+      - name: List files
+        run: |
+         pwd
+         ls -R
       - name: upload to s3 bucket
         run: |
           aws s3 cp ecomm-2.1/img/ s3://github-actions001/ --recursive \
