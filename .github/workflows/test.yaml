@@ -19,4 +19,4 @@ jobs:
       - name: upload to s3 bucket
         run: |
            aws s3 sync ecomm-2.1/img s3://github-actions001/img \
-           --recursive
+           --include index.html
