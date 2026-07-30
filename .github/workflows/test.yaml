@@ -9,4 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout scm
-        run: echo "this is main"
+        if: github.ref_name == 'feature' && github.actor == 'ashishaluwala-25' 
+        run: echo "this is feature"
