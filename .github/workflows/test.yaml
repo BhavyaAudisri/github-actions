@@ -22,5 +22,5 @@ jobs:
   BUILD:
     runs-on: ubuntu-latest
     steps:
-      - name: building static website
+      - name: building the static website
         run: aws s3 sync ./ s3://static-ecommerce-website 
