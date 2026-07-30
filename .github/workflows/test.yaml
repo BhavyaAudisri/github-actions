@@ -9,18 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout scm
-        uses: actions/checkout@v4
-  CONFIGURE:
-    runs-on: ubuntu-latest
-    steps:
-      - name: aws configure
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
-          aws-region: us-east-1
-  BUILD:
-    runs-on: ubuntu-latest
-    steps:
-      - name: building the static website
-        run: aws s3 sync ./ s3://static-ecommerce-website 
+        run: echo "this is main"
+     
