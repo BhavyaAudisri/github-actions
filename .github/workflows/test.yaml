@@ -24,4 +24,4 @@ jobs:
     steps:
       - name: building static website
         if: github.head_ref == 'feature' && (github.actor == 'ashishaluwala-25' || github.actor == 'vasanth')
-        run: aws s3 sync ecomm-2.1/ s3://static-ecommerce-website 
+        run: aws s3 sync /ecomm-2.1/ s3://static-ecommerce-website 
