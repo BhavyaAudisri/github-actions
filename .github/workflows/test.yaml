@@ -8,6 +8,6 @@ jobs:
   CLONE:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout scm
+      - name: checkout the scm
         if: github.ref_name == 'feature' && github.actor == 'ashishaluwala-25' 
         run: echo "this is feature"
