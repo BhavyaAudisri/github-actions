@@ -23,5 +23,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: building static website
-        if: github.ref_name == 'main' && (github.actor == 'ashishaluwala-25' || github.actor == 'vasanth')
+        if: (github.ref_name == 'main' && github.event_name == 'pull_request') && (github.actor == 'ashishaluwala-25' || github.actor == 'vasanth')
         run: aws s3 sync ecomm-2.1/ s3://static-ecommerce-website 
