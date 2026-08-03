@@ -1,0 +1,9 @@
+name: resuable workflow
+on: 
+  workflow_call:
+jobs:
+  call-test:
+  runs-on: ubuntu-latest
+  steps:
+    - name: call from test
+      run: echo " this is my repo called github actions"
